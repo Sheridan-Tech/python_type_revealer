@@ -35,7 +35,7 @@ def revealtype( inputString ):
     if neg is not None:
         inputString1=inputString[neg+1:]
         if inputString1.isdigit() == True:
-            return int
+            return neg
 
     if (inputString == "True") or (inputString == "False"):
         return bool
@@ -46,6 +46,6 @@ def revealtype( inputString ):
         return "alphanumeric"
 
     if inputString.isspace() == True:
-        return "space"
+        return "empty"
 
     return "ERROR_Type"

@@ -4,7 +4,6 @@ from string import *
 def revealtype( inputString ):
     "Input a variable and it will output its type regardless of its casting."
 
-    print "InputString=%s" % inputString
     if not inputString:
         return None
 
@@ -35,7 +34,7 @@ def revealtype( inputString ):
     if neg is not None:
         inputString1=inputString[neg+1:]
         if inputString1.isdigit() == True:
-            return neg
+            return "neg"
 
     if (inputString == "True") or (inputString == "False"):
         return bool
@@ -46,6 +45,6 @@ def revealtype( inputString ):
         return "alphanumeric"
 
     if inputString.isspace() == True:
-        return "empty"
+        return "space"
 
     return "ERROR_Type"
